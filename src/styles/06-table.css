@@ -1,0 +1,59 @@
+/* ============================================================
+   Output table (تب ۳)
+   ============================================================ */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1.5px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    background: var(--surface-sunken);
+    padding: var(--sp-2);
+    min-height: 72px;
+    -webkit-overflow-scrolling: touch;
+}
+.table-wrapper table {
+    width: 100%;
+    min-width: 360px;
+    border-collapse: collapse;
+    font-family: var(--font-data);
+    font-size: 0.88rem;
+    direction: ltr;
+    text-align: left;
+}
+.table-wrapper table th {
+    background: var(--ink);
+    color: var(--surface);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    padding: var(--sp-3) var(--sp-4);
+    font-size: 0.82rem;
+}
+.table-wrapper table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+.table-wrapper table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+.table-wrapper table td {
+    padding: var(--sp-3) var(--sp-4);
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    background: var(--surface);
+}
+.table-wrapper table tr:last-child td {
+    border-bottom: none;
+}
+.table-wrapper table tr:hover td {
+    background: var(--surface-sunken);
+}
+.duplicate-badge {
+    background: var(--danger-soft);
+    color: var(--danger);
+    border-radius: var(--radius-pill);
+    padding: 2px 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-right: var(--sp-2);
+    display: inline-block;
+}
+.no-data {
+    color: var(--ink-faint);
+    text-align: center;
+    padding: var(--sp-6) 0;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,30 @@
+    <!-- ===== تَب ۲ — پاک کردن دیتا بعد از یک کاراکتر ===== -->
+    <div class="tab-panel" id="tab2">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="delimiterInput">کاراکتر جداکننده</label>
+                <input type="text" id="delimiterInput" placeholder="مثلاً : یا #" value="" maxlength="5">
+                <div class="quick-btns">
+                    <button class="quick-btn" data-char=":"> : </button>
+                    <button class="quick-btn" data-char="#"> # </button>
+                    <button class="quick-btn" data-char="|"> | </button>
+                </div>
+                <small class="hint">هر چیزی بعد از این کاراکتر (به همراه خود کاراکتر) حذف می‌شود.</small>
+            </div>
+        </div>
+        <div class="textarea-group">
+            <label for="inputText2">لیست ورودی</label>
+            <textarea id="inputText2" placeholder="مثال:&#10;57.129.47.40:2053#Nova-3klvp&#10;192.168.1.1:8080#server"></textarea>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" id="processBtn2">✂️ پردازش</button>
+            <button class="btn btn-secondary" id="clearBtn2">🗑️ پاک‌کردن</button>
+        </div>
+        <div class="textarea-group output-area">
+            <label for="outputText2">نتیجه</label>
+            <textarea id="outputText2" readonly></textarea>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-success" id="copyBtn2">📋 کپی نتیجه</button>
+        </div>
+    </div>

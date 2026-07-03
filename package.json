@@ -1,0 +1,10 @@
+{
+  "name": "nova-text-tools",
+  "version": "2.0.0",
+  "description": "ابزارهای پردازش متن (افزودن شماره، حذف بعد از کاراکتر، گروه‌بندی IP:Port) — ساختار کامپوننتی",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve dist"
+  }
+}
