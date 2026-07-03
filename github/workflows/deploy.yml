@@ -1,0 +1,34 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:   # (اختیاری) اجرای دستی از تب Actions
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'   # اگر package-lock.json دارید
+
+      - name: 📦 Install dependencies (if any)
+        run: npm ci   # یا npm install
+
+      - name: 🛠️ Build project
+        run: npm run build
+
+      - name: 📂 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages   # نام برنچ مقصد
+          force_orphan: true         # پاک کردن تاریخچه برنچ gh-pages (اختیاری)
